@@ -1,0 +1,47 @@
+create table appointment
+
+(
+appNo int not null primary key,
+
+aDate varchar (255),
+
+aTime varchar (255),
+
+petNo int foreign key references pet (petNo),
+
+ownerID int foreign key references petowner (ownerID),
+
+veterinaryId int foreign key references veterinary (veterinaryId)
+
+)
+alter table appointment
+
+add clinicNO int foreign key references clinic (clinicNO)
+
+alter table appointment
+
+alter column aDate date
+
+insert into appointment
+
+values (01,’2 October 2010′,’10.00′,1,1,1,1)
+
+insert into appointment
+
+values (02,’3 November 2009′,’10.35′,2,2,2,2)
+
+insert into appointment
+
+values (03,’4 December 2009′,’13.00′,3,3,3,3)
+
+insert into appointment
+
+values (04,’5 January 2010′,’15.00′,4,4,4,4)
+
+insert into appointment
+
+values (05,’6 Feb 2010′,’18.00′,5,5,5,5)
+
+insert into appointment
+
+values (06,’7 March 2010′,’9.00′,6,6,6,6)
