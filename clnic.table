@@ -1,0 +1,144 @@
+create table clinic
+
+(
+clinicNO int not null primary key,
+
+telNo varchar(255),
+
+address varchar(255),
+
+)
+alter table clinic
+
+add clinicName varchar (255)
+
+alter table clinic
+
+add openingHour varchar(255)
+
+alter table clinic
+
+add eTelNo varchar (255)
+
+insert into clinic
+
+values (01,2863015,’Darwin Avenue’,’8.00-21.00′,2863000,’Enfield’)
+
+insert into clinic
+
+values (02,4650001,’John David Avenue’,’8.00-21.00′,2868000,’Islington’)
+
+insert into clinic
+
+values (03,4278926,’King Arthur Avenue’,’8.00-21.00′,2867000,’Hackney’)
+
+insert into clinic
+
+values (04,2682365,’Paul Mac Avenue’,’8.00-21.00′,2866000,’Holloway’)
+
+insert into clinic
+
+values (05,4682685,’James Micheal Avenue’,’8.00-21.00′,2865000,’Chingford’)
+
+insert into clinic
+
+values (06,2863015,’Benaoit Frank Avenue’,’8.00-21.00′,2864000,’Leyton’)
+
+Pet owner
+create table petowner
+
+(
+ownerID int not null primary key,
+
+oFName varchar (255),
+
+oLName varchar (255),
+
+clinicNo int foreign key references clinic (clinicNo))
+
+alter table petowner
+
+add addres varchar(255)
+
+alter table petowner
+
+add hTelNo varchar(255)
+
+alter table petowner
+
+add mTelNo varchar (255)
+
+insert into petowner
+
+values (01,’Marvin’,’Hemraj’,1,’Edith Cavel Str’,2106584,758956)
+
+insert into petowner
+
+values (02,’Ramjeet’,’Lavin’,2,’Avenue Gonin’,2564589,7585695)
+
+insert into petowner
+
+values (03,’Arzeena’,’Bakarkhan’,3,’Gorgetown Str’,2106584,758956)
+
+insert into petowner
+
+values (04,’Chetan’,’Sing’,4,’Jackson Road’,2458695,7582658)
+
+insert into petowner
+
+values (05,’Hansley’,’Nowjee’,5,’15 Ollier Avenue’,2565458,7589562)
+
+insert into petowner
+
+values (06,’Sam’,’Fisher’,6,’Leess Street’,26584585,75895623)
+
+Pet Table
+create table pet
+
+(
+petNo int not null primary key,
+
+type varchar (255),
+
+breed varchar (255),
+
+sex varchar (255),
+
+dob varchar (255)
+
+)
+alter table pet
+
+add clinicNo int foreign key references clinic (clinicNo)
+
+alter table pet
+
+add ownerid int foreign key references petOwner (ownerid)
+
+alter table pet
+
+add petName varchar (255)
+
+insert into pet
+
+values (01,’Dog’,’Terroer’,’Male’,’1 Jan 2004′,01,01,’Wouf’)
+
+insert into pet
+
+values (02,’Dog’,’Poodle’,’Female’,’2 Feb 2005′,02,02,’Snoopy’)
+
+insert into pet
+
+values (03,’Cat’,’Persian’,’Male’,’3 March 2006′,03,03,’Minous’)
+
+insert into pet
+
+values (04,’Cat’,’Siamese’,’Female’,’4 April 2007′,04,04,’Milous’)
+
+insert into pet
+
+values (05,’Rabit’,’Dwarf’,’male’,’5 May 2008′,05,05,’Lapino’)
+
+insert into pet
+
+values (06,’Cat’,’Siamese’,’Female’,’4 June 2009′,06,06,’Lapinas’)
