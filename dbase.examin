@@ -1,0 +1,43 @@
+Examination Table
+create table examination
+
+(
+examNo int not null primary key )
+
+alter table examination
+
+add veterinaryId int foreign key references veterinary (veterinaryId)
+
+alter table examination
+
+add petNo int foreign key references pet (petNo)
+
+alter table examination
+
+add presDrugType varchar (255),
+
+presPeriod varchar (255)
+
+insert into examination
+
+values (1,1,’Anti-biotic’,15,01)
+
+insert into examination
+
+values (2,2,’Painkiller’,14,02)
+
+insert into examination
+
+values (3,3,’Behaviour modification’,13,03)
+
+insert into examination
+
+values (4,4,’Ear medication’,12,04)
+
+insert into examination
+
+values (5,5,’Skin medication’,15,05)
+
+insert into examination
+
+values (6,6,’Painkiller’,10,06)
